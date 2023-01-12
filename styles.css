@@ -13,8 +13,46 @@ h1 {
     flex-direction: row;
 }
 
-.columns, .features {
+main {
     display: flex;
-    flex-direction: row;
-    width: 75%;
+    flex-direction: column;
+}
+
+.devTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.columns, .features {
+display: flex;
+flex-direction: row;    
+width: 50%;
+}
+
+.usageArea {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.searchField {
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    border: thin solid black;
+    margin: 40px 10px 40px 0px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px 40px 0px;
 }
