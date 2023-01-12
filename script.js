@@ -4,14 +4,14 @@ const omdbKey = '8b30258'
 
 
 //variables to tie the html
-const cityEl = $('#city');
-const dateEl = $('#date');
-const weatherIconEl = $('#weather-icon');
-const temperatureEl = $('#temperature');
-const humidityEl = $('#humidity');
-const windEl = $('#wind');
-const cityListEl = $('.cityList');
-const cityInput = $('#city-input');
+const searchInput = $('#searchInput'); // On index.html page
+const searchBtn = $('#searchBtn'); // On index.html page
+const homeBtn = $('#homeBtn'); // On summary.html page
+const movieResults = $('#movieResults'); // On summary.html page
+const moviePhoto = $('moviePhoto');
+// const windEl = $('#wind');
+// const cityListEl = $('.cityList');
+// const cityInput = $('#city-input');
 
 // previous searches 
 let pastMovies = [];
