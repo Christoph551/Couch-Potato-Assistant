@@ -1,5 +1,8 @@
 const StreamKey = 'f46c29e56amsh9e809a40b041c81p199e23jsne729af91c033'; 
 const omdbKey = '8b30258'
+//const MoviePost = `http://img.omdbapi.com/?apikey=${apiKey}&t=${movieTitle}`; see line 61
+
+
 //variables to tie the html
 const cityEl = $('#city');
 const dateEl = $('#date');
@@ -40,6 +43,7 @@ function storeMovies() {
     localStorage.setItem('pastMovies', JSON.stringify(pastMovies));
 }
 
+
 // Functions for the movie, streaming api calls
 
 function buildURLcity(city) {
@@ -47,6 +51,37 @@ function buildURLcity(city) {
         return `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     }
 }
+
+//function buildUrlMovie(Movie){
+// if (movie){
+//      return "http://www.omdbapi.com/?apikey=${ombdKey}&t=${Movie}"   
+//}
+//}
+
+//funtion buildUrlMovImg(Poster){ this one is ???
+// if (poster){
+//   return "http://img.omdbapi.com/?apikey=${omdbKey}&t=${Movie}";  
+//}
+//}
+
+//const options = { //this is the stream fetch command 
+	//method: 'GET',
+	//headers: {
+	//	'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+	//	'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+	//}
+//};
+
+//fetch('https://streaming-availability.p.rapidapi.com/search/basic?country=us&service=netflix&type=movie&genre=18&page=1&output_language=en&language=en', options)
+//	.then(response => response.json())
+//	.then(response => console.log(response))
+//	.catch(err => console.error(err));
+
+//function buildUrlStream(stream){
+// if (stream){
+//     return "http"
+//
+//
 
 function buildURLId(id) {
     return `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${apiKey}`;
