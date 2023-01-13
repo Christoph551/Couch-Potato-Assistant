@@ -9,7 +9,12 @@ h1 {
     border-bottom: thick solid rgba(163, 0, 0, 0.493);
     margin: 0px 300px 0px 300px;
 }
-
+.content h4 {
+    font-size: 1.25em;
+    margin-bottom: 0.8em;
+    display: flex;
+    justify-content: space-around;
+}
 .aboutDevs {
     display: flex;
     flex-direction: row;
