@@ -7,7 +7,12 @@ h1 {
     color:blanchedalmond;
     background-color: dimgrey;
 }
-
+.content h4 {
+    font-size: 1.25em;
+    margin-bottom: 0.8em;
+    display: flex;
+    justify-content: space-around;
+}
 .aboutDevs {
     display: flex;
     flex-direction: row;
@@ -16,6 +21,7 @@ h1 {
 main {
     display: flex;
     flex-direction: column;
+    size: 50%
 }
 
 .devTitle {
@@ -25,10 +31,8 @@ main {
     font-weight: 200;
 }
 
-.columns, .features {
+.columns-features {
 display: flex;
-flex-direction: row;    
-width: 50%;
 }
 
 .usageArea {
