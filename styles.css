@@ -1,11 +1,13 @@
 h1 {
     display: flex;
     justify-content: center;
-    font-size: x-large;
+    font-size: 60px;
     font-weight: 400;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:blanchedalmond;
-    background-color: dimgrey;
+    color:rgb(150, 150, 150);
+    background-color: black;
+    border-bottom: thick solid rgba(163, 0, 0, 0.493);
+    margin: 0px 300px 0px 300px;
 }
 .content h4 {
     font-size: 1.25em;
@@ -33,14 +35,10 @@ main {
 
 .columns-features {
 display: flex;
+flex-direction: row;    
+width: 100%;
 }
 
-.usageArea {
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    font-weight: 200;
-}
 
 .searchField {
     display: flex;
@@ -59,4 +57,46 @@ display: flex;
     display: flex;
     justify-content: center;
     margin: 40px 0px 40px 0px;
+}
+
+.button.is-danger {
+    background-color: rgba(163, 0, 0, 0.493);
+}
+
+.cover {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.potatoImg {
+    width: 300px;
+    height: 300px;
+}
+
+body {
+    background-color: black;
+}
+
+.usageParagraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(150, 150, 150);
+    font-size: large;
+    border-bottom:rgba(163, 0, 0, 0.493);
+    margin: 0px 300px 0px 300px;
+}
+
+.usageArea {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 200;
+    border-bottom:rgba(163, 0, 0, 0.493);
+    margin: 0px 300px 0px 300px;
+}
+
+.image.is-4by3 {
+    padding: 0;
 }

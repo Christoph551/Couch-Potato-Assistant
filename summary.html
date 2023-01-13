@@ -40,7 +40,7 @@
                             <div class="tabs is-right">
                                 <ul>
                                     <!--This will be the home button to take you to the main page-->
-                                    <li class="is-active"><a>Home</a></li>
+                                    <li class="is-active"><a src="index.html" id="homeBtn">Home</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -56,15 +56,15 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="columns is-vcentered">
-                    <div class="column is-5">
+                    <div id="moviePhoto" class="column is-5">
                         <figure class="image is-4by3">
                             <!--This will be the movie poster-->
                             <img src="https://picsum.photos/800/600/?random" alt="Description"> 
                         </figure>
                     </div>
 
-                    <!--This sections will be the summary with the streaming services-->
-                    <div class="column is-6 is-offset-1">
+                    <!--This sections will be the summary with the streaming services. Will need to add these Elements using JS after pulling data from API -->
+                    <div id="movieResults" class="column is-6 is-offset-1">
                         <h1 class="title is-2" style="color: black;">
                             Title of movie
                         </h1>
