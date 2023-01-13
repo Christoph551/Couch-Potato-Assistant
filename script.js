@@ -32,7 +32,7 @@ return a.movieName.toUpperCase().localeCompare(b.movieName.toUpperCase());
 
 // local storage for movie
 function loadMovies() {
-    const storedMovie = JSON.parse(localStorage.getItem('pastMovie'));
+    const storedMovie = JSON.parse(localStorage.getItem('movieName'));
     if (storedMovie) {
         pastMovie = storedMovie;
     }
@@ -40,7 +40,7 @@ function loadMovies() {
 
 // store movies/shows
 function storeMovies() {
-    localStorage.setItem('pastMovies', JSON.stringify(pastMovies));
+    localStorage.setItem('movieName', JSON.stringify(movieName));
 }
 
 searchBtn.click(function() {
@@ -52,14 +52,18 @@ searchBtn.click(function() {
                 },
                 
                 success: function(data) {
-                console.log(movieName);    // process the returned data
+                  // process the returned data
                     window.location.href = "summary.html?name=" + movieName;
+                    
+                    storeMovies(data);
                 }
                 
             });
         });
-
+        
     })
+
+
 
 
 // Functions for the movie, streaming api calls
