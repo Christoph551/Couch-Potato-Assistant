@@ -91,7 +91,6 @@ body {
     margin: 0px 300px 0px 300px;
 }
 
-.image, .is-4by3 {
-    display: flex;
-    position: relative; /* Have to modify the parent div, but the images disappear when doing that. */
+.image.is-4by3 {
+    padding: 0;
 }
