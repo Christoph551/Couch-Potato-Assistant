@@ -2,61 +2,32 @@ const StreamKey = 'f46c29e56amsh9e809a40b041c81p199e23jsne729af91c033';
 const omdbKey = '8b30258'
 //const MoviePost = `http://img.omdbapi.com/?apikey=${apiKey}&t=${movieTitle}`; see line 61
 
-
 //variables to tie the html
-const searchBtn = $('#searchBtn'); // On index.html page
-const homeBtn = $('#homeBtn'); // On summary.html page
-const movieResults = $('#movieResults'); // On summary.html page
-const moviePhoto = $('moviePhoto');
-const $movieName = $("#movieName")
-// const windEl = $('#wind');
-// const cityListEl = $('.cityList');
-// const cityInput = $('#city-input');
-
-// previous searches 
+const $searchBtn = $('#searchBtn'); // On index.html page
+const $userInput = $('#userInput')
+const $homeBtn = $('#homeBtn'); // copy/paste to summary.html page INSTEAD
+const $movieResults = $('#movieResults'); // copy/paste to summary.html page
 let pastMovies = [];
-
-
-
-// $(document).ready(function) {}
-
-
-// searchBtn.on('click'), function (event) {
-//     console.log("i've been clicked")
 
 //makes it not case sensitive 
 function compare(a, b) {
 return a.movieName.toUpperCase().localeCompare(b.movieName.toUpperCase());
 }
 
-
-
-// local storage for movie
-function loadMovies() {
-    const storedMovie = JSON.parse(localStorage.getItem('movieName'));
-    if (storedMovie) {
-        pastMovie = storedMovie;
-    }
-}
-
 // store movies/shows
-function storeMovies() {
-    localStorage.setItem('movieName', JSON.stringify(movieName));
+function storeMovies(movieName,movieData) {
+    localStorage.setItem(movieName, JSON.stringify(movieData));
 }
 
-searchBtn.click(function() {
-    const movieName = $("#movieName").val();
+$searchBtn.click(function() {
+    const movieName = $userInput.val();
     $.ajax({
-        url: `http://www.omdbapi.com/?apikey=${omdbKey}&t=${movieName}`,
-        data: {
-                    name: movieName
-                },
-                
+        url: `https://www.omdbapi.com/?apikey=${omdbKey}&t=${movieName}`,
                 success: function(data) {
                   // process the returned data
+                storeMovies(movieName,data);
                     window.location.href = "summary.html?name=" + movieName;
                     
-                    storeMovies(data);
                 }
                 
             });
