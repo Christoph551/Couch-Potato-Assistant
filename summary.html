@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Couch Potato Assistant</title>
-    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./Assets/Favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Bulma Version 0.9.0-->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
@@ -21,6 +21,11 @@
             border: 1px solid #ccc;
         }
     </style>
+        <script defer
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
@@ -57,7 +62,7 @@
             <div class="container has-text-centered">
                 <div class="columns is-vcentered">
                     <div id="moviePhoto" class="column is-5">
-                        <figure class="image is-4by3">
+                        <figure id="movie-poster" class="image is-4by3">
                             <!--This will be the movie poster-->
                             <img src="https://picsum.photos/800/600/?random" alt="Description"> 
                         </figure>
@@ -68,6 +73,7 @@
                         <h1 class="title is-2" style="color: black;">
                             Title of movie
                         </h1>
+                        <div id="movieName"></div> <!-- Set to append the h1 -->
                         <h2 class="subtitle is-4">
                             Summary of Movie
                         </h2>
@@ -83,7 +89,7 @@
         </div>
 
     </section>
-    <script src="../js/bulma.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

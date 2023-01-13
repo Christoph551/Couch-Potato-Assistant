@@ -4,15 +4,12 @@ const omdbKey = '8b30258'
 
 
 //variables to tie the html
+const userInput = $('#userInput')
 const searchBtn = $('#searchBtn'); // On index.html page
 const homeBtn = $('#homeBtn'); // On summary.html page
-const movieResults = $('#movieResults'); // On summary.html page
-const moviePhoto = $('moviePhoto');
-const $movieName = $("#movieName")
-// const windEl = $('#wind');
-// const cityListEl = $('.cityList');
-// const cityInput = $('#city-input');
-
+const movieResults = $('#movieResults'); // Parent div for title, actors, rating, etc... on summary.html page
+const moviePhoto = $('moviePhoto'); // Parent div for movie's poster photo on summary.html
+const $movieName = $("#movieName") // Created ID for line 68 of summary.html
 // previous searches 
 let pastMovies = [];
 
@@ -40,29 +37,74 @@ function loadMovies() {
 
 // store movies/shows
 function storeMovies() {
-    localStorage.setItem('movieName', JSON.stringify(movieName));
+    localStorage.setItem('movieName', JSON.stringify($movieName));
 }
 
-searchBtn.click(function() {
-    const movieName = $("#movieName").val();
+
+
+
+// function searchButton(event){
+//     event.preventDefault();
+//     let movieName = $movieName.value.trim();
+//     if(movieName == ''){
+//         prompt.style.display = 'block';
+//             promptTxt.textContent = "Alert: Please Enter Drink Name";
+//             exitPrompt.addEventListener('click', function() {
+//                 prompt.style.display = 'none';
+//         })
+//         return
+//     } 
+//     getMovieInfo()
+// }
+
+// function getMovieInfo() {
+
+//     let movieInfo = `https://www.themoviedb.com/api/json/v1/1/search.php?s=${movieInfo}`;
+  
+//     fetch(movieInfo)
+//     .then(function (response) {
+//       return response.json();
+//     })
+//     .then(function (data) {
+//         clearPriorSearch()
+//         displayCocktail(data);
+//     });
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+searchBtn.on("submit", function () {
+    const userInput = $("#userInput").val();
+    console.log($movieName)
     $.ajax({
-        url: `http://www.omdbapi.com/?apikey=${omdbKey}&t=${movieName}`,
+        url: `https://www.omdbapi.com/?apikey=${omdbKey}&t=${$movieName}`,
         data: {
-                    name: movieName
+                    name: $movieName
                 },
                 
                 success: function(data) {
                   // process the returned data
-                    window.location.href = "summary.html?name=" + movieName;
-                    
+                    window.location.href = "summary.html?name=" + $movieName;
+                    $("#movie-name").text(data.name); $("#movie-poster").attr("src", data.poster); 
                     storeMovies(data);
                 }
-                
             });
         });
-        
     })
 
+    
 
 
 
