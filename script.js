@@ -27,12 +27,12 @@ $searchBtn.click(function() {
                   // process the returned data
                 storeMovies(movieName,data);
                     window.location.href = "summary.html?name=" + movieName;
-                    
+                    // I believe we'll need to add if/else statements. Clicking the button without typing still takes the user to the summary page.
                 }
-                
             });
         });
 
+    
 
 
 
