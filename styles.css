@@ -18,6 +18,7 @@ h1 {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .devTitle {
@@ -28,9 +29,9 @@ main {
 }
 
 .columns, .features {
-display: flex;
-flex-direction: row;    
-width: 100%;
+    width: 1500px;
+    height: auto;
+    align-items: baseline;
 }
 
 
@@ -91,6 +92,11 @@ body {
     margin: 0px 300px 0px 300px;
 }
 
-.image.is-4by3 {
-    padding: 0;
+.image {
+    height: 500px;
+    width: 600px;
+}
+
+footer {
+    background-color: black;
 }
