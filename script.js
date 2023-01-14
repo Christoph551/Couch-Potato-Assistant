@@ -5,9 +5,7 @@ const omdbKey = '8b30258'
 //variables to tie the html
 const $searchBtn = $('#searchBtn'); // On index.html page
 const $userInput = $('#userInput')
-const $homeBtn = $('#homeBtn'); // copy/paste to summary.html page INSTEAD
-const $movieResults = $('#movieResults'); // copy/paste to summary.html page
-let pastMovies = [];
+
 
 //makes it not case sensitive 
 function compare(a, b) {
