@@ -1,2 +1,5 @@
-// Creating secondary js file to link to summary.html file.
-// Already linked at the bottom of the doc
+// Variables moved from script.js file
+const $movieResults = $('#movieResults'); 
+let pastMovies = []; 
+
+

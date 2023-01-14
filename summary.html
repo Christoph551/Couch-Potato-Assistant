@@ -18,21 +18,20 @@
         crossorigin="anonymous">
     </script>
 </head>
+
 <header class="headers">
     <h1 class="title" style="color: rgb(150, 150, 150);">Couch Potato Assistant</h1><br>
 </header>
+
 <div class="hero-head">
     <ul>
-        <!--This will be the home button to take you to the main page-->
-        <li class="is-active"><a src="index.html" id="homeBtn">Home</a></li>
+        <!-- Found solution at https://programminghead.com/submit-button-redirect-to-another-page-in-html -->
+        <button onClick="window.location.href='index.html'"><a id="homeBtn">Home</a></button>
     </ul>
 </div>
 
 <body>
     <section class="hero is-fullheight is-default is-bold">
-        
-
-        
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="columns is-vcentered">
@@ -43,7 +42,7 @@
                         </figure>
                     </div>
 
-                    <!--This sections will be the summary with the streaming services. Will need to add these Elements using JS after pulling data from API -->
+                    <!--This section will be the summary with the streaming services. Will need to add these Elements using JS after pulling data from API -->
                     <div id="movieResults" class="column is-6 is-offset-1">
                         <h1 class="title is-2" style="color: rgb(150, 150, 150);">
                             Title of movie
