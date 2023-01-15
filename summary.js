@@ -1,5 +1,5 @@
 // Variables moved from script.js file
-const $movieResults = $('#movieResults'); 
-let pastMovies = []; 
+// const $movieResults = $('#movieResults'); 
+// let pastMovies = []; 
 
 
