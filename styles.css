@@ -77,6 +77,10 @@ main {
     background-color: rgba(163, 0, 0, 0.493);
 }
 
+#homeBtn {
+color:rgb(150, 150, 150);
+}
+
 .cover {
     display: flex;
     justify-content: center;
