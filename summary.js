@@ -3,3 +3,8 @@
 // let pastMovies = []; 
 
 
+
+const movieData = JSON.parse(localStorage.getItem("Shrek")); 
+const actors = movieData.Actors;
+
+console.log(actors)
