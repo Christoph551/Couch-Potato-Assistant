@@ -166,6 +166,3 @@ function updateLastSearched() {
 //         searchWeather(queryURL);
 //     }
 // }
-
-
-
