@@ -73,6 +73,23 @@ main {
     margin: 40px 0px 40px 0px;
 }
 
+#model {
+    display: flex;
+    justify-content: center;
+}
+
+#close {
+    display: flex;
+    justify-content: space-around;
+    color: rgb(163, 0, 0);
+}
+
+#promptTxt {
+    display: flex;
+    justify-content: center;
+    color: rgb(163, 0, 0);
+}
+
 .button.is-danger {
     background-color: rgba(163, 0, 0, 0.493);
 }
@@ -94,6 +111,7 @@ color:rgb(150, 150, 150);
 
 body {
     background-color: black;
+    color: rgb(163, 0, 0);
 }
 
 .usageParagraph {
