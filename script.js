@@ -1,6 +1,10 @@
-const StreamKey = 'f46c29e56amsh9e809a40b041c81p199e23jsne729af91c033'; 
-const omdbKey = '8b30258'
-//const MoviePost = `http://img.omdbapi.com/?apikey=${apiKey}&t=${movieTitle}`; see line 61
+const StreamKey = 'f46c29e56amsh9e809a40b041c81p199e23jsne729af91c033'; // Rapid API
+
+const tmbdKey = '1fbb8ee4f6b00e55b99760b9656ba30e'
+    // url: https://api.themoviedb.org/3/movie/550?api_key=1fbb8ee4f6b00e55b99760b9656ba30e
+
+
+    //const MoviePost = `http://img.omdbapi.com/?apikey=${apiKey}&t=${movieTitle}`; see line 61
 
 //variables to tie the html
 const $searchBtn = $('#searchBtn'); // On index.html page
@@ -19,6 +23,7 @@ function storeMovies(movieName,movieData) {
     localStorage.setItem(movieName, JSON.stringify(movieData));
 }
 
+
 // $searchBtn.click(function() {
 //     const movieName = $userInput.val();
 //     $.ajax({
@@ -33,8 +38,12 @@ function storeMovies(movieName,movieData) {
 //         });
 
     
+
+
 $searchBtn.click(function() {
+    const omdbKey = '8b30258'
     const movieName = $userInput.val();
+
     if (movieName.length === 0) {
         
         // display an error message to the user
@@ -75,6 +84,7 @@ function updateLastSearched() {
 
         
         
+
 
 
 
