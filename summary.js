@@ -1,30 +1,23 @@
-// // Variables moved from script.js file
-// // const $movieResults = $('#movieResults'); 
-// const $movieResults = document.getElementById('#movieResults');
+// Variables moved from script.js file
+
+
+
+
+
+const movieName = new URLSearchParams(window.location.search).get("name");
+const movieData = JSON.parse(localStorage.getItem(movieName));
+
+document.querySelector("#movieTitle").textContent = movieData.Title;
+document.querySelector("#moviePlot").textContent = movieData.Plot;
+document.querySelector("#moviePoster").src = movieData.Poster;
+
+
+// const $movieResults = $('#movieResults'); 
 // let pastMovies = []; 
 
 
 
+const movieData = JSON.parse(localStorage.getItem("Shrek")); 
+const actors = movieData.Actors;
 
-
-
-// const searchData = {
-//     title: $userInput.value,
-//     actors: $actors.value,
-//     genre: $genre.value,
-//     plot: $plot.value.trim(),
-//     rating: $rating.value,
-//     poster: $poster.value,
-// }
-
-console.log(title)
-
-renderMovieData ();
-
-function renderMovieData(data) {
-    const movieData = JSON.parse(localStorage.getItem("Shrek"));
-    for (let i=0; i<movieData.length; i++) {
-        document.getElementById('#movieResults').innerHTML +=
-        data[i].id + data[i.title + ""];
-    }
-}
+console.log(actors)
