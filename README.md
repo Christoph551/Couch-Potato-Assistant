@@ -1,4 +1,4 @@
-# <Couch-Potato-Assistant>
+# Couch Potato Assistant
 
 ## Description
 
@@ -19,9 +19,13 @@ The user will then be redirected to another page that will display pertinent dat
 
 ## Credits
 
-[Chris Simmonds](https://github.com/Christoph551)
-[Leo Segura](https://github.com/lsegura06)
-[Ian Gurgoze](https://github.com/igurgoze)
+[Chris Simmonds](https://github.com/Christoph551) Github Profile
+<br>
+
+[Leo Segura](https://github.com/lsegura06) Github Profile
+<br>
+
+[Ian Gurgoze](https://github.com/igurgoze) Github Profile
 
 ## License
 
