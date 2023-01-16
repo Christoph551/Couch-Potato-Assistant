@@ -132,3 +132,8 @@ footer {
 .hero-body {
     flex-grow: 0.5;
 }
+
+#lastSearched {
+    background-color: white;
+    color: red;
+}
