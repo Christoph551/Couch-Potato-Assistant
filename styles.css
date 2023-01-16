@@ -100,7 +100,7 @@ color:rgb(150, 150, 150);
 
 .cover {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-top: 20px;
 }
 
@@ -155,9 +155,20 @@ footer {
     flex-grow: 0.5;
 }
 
+.searchHistory {
+    display: flex;
+    justify-content: center;
+}
+
 #lastSearched {
-    background-color: white;
-    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(80, 80, 80, 0.100);
+    color:rgb(150, 150, 150);   
+    font-size: 30px; 
+    width: 500px;
+    border: thin solid rgba(163, 0, 0, 0.493);
 }
 
 #moviePoster {
