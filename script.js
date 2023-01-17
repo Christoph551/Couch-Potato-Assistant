@@ -22,11 +22,10 @@ function storeMovies(movieName,movieData) {
 
 
 $searchBtn.click(function () {
-    const omdbKey = '8b30258'
+    const omdbKey = '8b30258';
     const movieName = $userInput.val();
-
+    var titleId;
     if (movieName.length === 0) {
-        
         // display an error message to the user
         prompt.style.display = 'block';
         promptTxt.textContent = "Oops! Please enter the name of a show or movie.";
@@ -47,10 +46,15 @@ $searchBtn.click(function () {
                 updateLastSearched();
                 storeMovies(movieName,data);
                 window.location.href = "summary.html?name=" + movieName;
+                titleId = data.imdbID;
+                //store the titleId in a variable
+
+                
+                    }
+                });
             }
         });
-    }
-});
+    
 
 function updateLastSearched() {
     lastSearched = JSON.parse(localStorage.getItem("lastSearched")) || [];
