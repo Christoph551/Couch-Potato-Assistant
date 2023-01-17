@@ -1,7 +1,7 @@
 // Variables moved from script.js file
 const movieName = new URLSearchParams(window.location.search).get("name");
 const movieData = JSON.parse(localStorage.getItem(movieName));
-const streamingData = JSON.parse(localStorage.getItem("movieStreamingData"));
+
 
 document.querySelector("#movieTitle").textContent = movieData.Title;
 document.querySelector("#moviePlot").textContent = movieData.Plot;
@@ -27,6 +27,11 @@ function renderstreamingData(data){
     const buyservices = data.buy.map(function(resource){
         return resource.provider_name;
     })
-    console.log(rentservices);
-    console.log(buyservices);
+    // use querySelector to select the element with class "rent"
+    const rentElement = document.querySelector('.rent');
+    // use querySelector to select the element with class "buy"
+    const buyElement = document.querySelector('.buy');
+    // update the text content of the element with the provider names
+    rentElement.textContent = rentservices.join(', ');
+    buyElement.textContent = buyservices.join(', ');
 }
