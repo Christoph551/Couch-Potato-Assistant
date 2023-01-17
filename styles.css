@@ -46,7 +46,8 @@ main {
     margin: 40px 0px 40px 0px;
 }
 
-.columns, .features {
+.columns-features {
+    display: flex;
     width: 1500px;
     height: auto;
     align-items: baseline;
@@ -167,6 +168,7 @@ body {
 
 #moviePoster {
     padding: 0px;
+    height: 900px
 }
 
 #movieTitle {
@@ -246,10 +248,119 @@ body {
     border-radius: 4px;
     background-color: rgba(163, 0, 0, 0.493);
     color: white;
-    width: 80px;
+    width: 120px;
     height:30px;
 }
 
 #lastSearched button:hover {
     background-color: #f03a5f;
+}
+
+.columns:last-child {
+    margin-bottom: 0rem;
+}
+
+@media screen and (max-width: 2500px) {
+    .columns-features{
+        display: flex;
+    }
+
+h1 {
+    margin: 10px 150px 10px 150px;
+}
+
+}
+
+
+@media screen and (max-width: 1500px) {
+    .columns-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 10px 100px 10px 100px;
+}
+
+.image {
+    height: 500px;
+    width: 500px;
+}
+
+}
+
+@media screen and (max-width: 1200px), print {
+.column.is-4, .column.is-4-tablet {
+    display: flex;
+    justify-content: center;
+    }
+
+h1 {
+    margin: 10px 100px 10px 100px;
+    font-size: 40px;
+}
+
+.image {
+    height: 400px;
+    width: 500px;
+}
+
+.usageParagraph {
+    margin: 0px 200px 0px 200px;
+}
+
+}
+
+
+
+@media  screen and (max-width: 990px) {
+h1 {
+    margin: 10px 100px 10px 100px;
+    font-size: 30px;
+}
+
+.usageParagraph {
+    font-size: 18px;
+    margin: 0px 200px 0px 200px;
+}
+
+.image {
+    height: 400px;
+    width: 500px;
+}
+
+}
+
+@media  screen and (max-width: 900px) {
+    h1 {
+        margin: 10px 100px 10px 100px;
+        font-size: 30px;
+    }
+    
+    .usageParagraph {
+        font-size: 18px;
+    }
+    
+    .image {
+        height: 400px;
+        width: 500px;
+    }
+    
+    }
+
+@media screen and (max-width: 775px) {
+    .usageArea {
+        font-size: 40px;
+    }
+
+.devTitle {
+    font-size: 40px;
+}
+
+.column.is-4, .column.is-4-tablet {
+    width: 500px;
+}
+
 }
