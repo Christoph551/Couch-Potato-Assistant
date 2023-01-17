@@ -56,12 +56,6 @@ $searchBtn.click(function () {
         });
     
 
-    
-
-
-
-
-    
 function updateLastSearched() {
     lastSearched = JSON.parse(localStorage.getItem("lastSearched")) || [];
     $('#lastSearched').empty(); // remove any existing buttons

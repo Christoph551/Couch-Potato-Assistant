@@ -19,6 +19,7 @@ $.ajax({
         renderstreamingData(data.results.US)
     }
 });
+
 function renderstreamingData(data){
     const rentservices = data.rent.map(function(resource){
         return resource.provider_name;
