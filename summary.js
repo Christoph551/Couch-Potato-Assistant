@@ -32,6 +32,6 @@ function renderstreamingData(data){
     // use querySelector to select the element with class "buy"
     const buyElement = document.querySelector('.buy');
     // update the text content of the element with the provider names
-    rentElement.textContent = rentservices.join(', ');
-    buyElement.textContent = buyservices.join(', ');
+    rentElement.textContent = rentservices.join(' | ');
+    buyElement.textContent = buyservices.join(' | ');
 }
