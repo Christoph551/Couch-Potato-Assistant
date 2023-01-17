@@ -22,11 +22,10 @@ function storeMovies(movieName,movieData) {
 
 
 $searchBtn.click(function () {
-    const omdbKey = '8b30258'
+    const omdbKey = '8b30258';
     const movieName = $userInput.val();
-
+    var titleId;
     if (movieName.length === 0) {
-        
         // display an error message to the user
         prompt.style.display = 'block';
         promptTxt.textContent = "Oops! Please enter the name of a show or movie.";
@@ -47,39 +46,22 @@ $searchBtn.click(function () {
                 updateLastSearched();
                 storeMovies(movieName,data);
                 window.location.href = "summary.html?name=" + movieName;
+                titleId = data.imdbID;
+                //store the titleId in a variable
+
+                
+                    }
+                });
             }
         });
-    }
-});
+    
 
-// This is the function for the streaming availability. Not currently working
-$searchBtn.click(function() {
-    const movieName = $userInput.val();
-
-        $.ajax({
-            url: `https://streaming-availability.p.rapidapi.com/v2/search/title`,
-            type: 'GET',
-            data: {
-                'title': movieName,
-                'country': 'us',
-                'type': 'movie',
-                'output_language': 'en'
-            },
-            beforeSend: function(xhr) {
-                xhr.setRequestHeader('x-rapidapi-host', 'streaming-availability.p.rapidapi.com');
-                xhr.setRequestHeader('x-rapidapi-key', 'f46c29e56amsh9e809a40b041c81p199e23jsne729af91c033');
-            },
-            success: function(data) {
-                localStorage.setItem("lastSearched", JSON.stringify(lastSearched));
-                updateLastSearched();
-                storeMovies(movieName,data);
-                console.log(data);
-            }
-        });
-    });
+    
 
 
 
+
+    
 function updateLastSearched() {
     lastSearched = JSON.parse(localStorage.getItem("lastSearched")) || [];
     $('#lastSearched').empty(); // remove any existing buttons
