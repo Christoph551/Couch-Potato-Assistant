@@ -16,10 +16,15 @@ The user will then be redirected to another page that will display pertinent dat
 
 From there, if you were to click on the Home button, then you will be redirected to the home page. The home page will now display the previous 3 movie searches as a button below the search field. Simply click that button to reload the previously displayed movie information. 
 
+## Screenshots for Desktop View
 
-![Home Page](./Assets/Initial-Homepage.PNG)
-![Summary Page](./Assets/Movie-Info.PNG)
+![Home Page](./Assets/Initial-Homepage.png)
+![Movie Info](./Assets/Movie-Info.png)
 
+## Screenshots for Mobile View
+
+![Home Page Mobile]()
+![Movie Info Mobile]()
 
 ## Credits
 
