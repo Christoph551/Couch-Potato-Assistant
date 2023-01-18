@@ -178,9 +178,7 @@ body {
 
 #modal {
     display: none;
-    position: fixed;
     z-index: 1;
-    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -286,7 +284,15 @@ h1 {
 
 .image {
     height: 500px;
-    width: 500px;
+    width: 600px;
+}
+
+.columns-features {
+    width: 600px;
+}
+
+.column.is-4, .column.is-4-tablet {
+    width: 600px;
 }
 
 }
@@ -303,12 +309,24 @@ h1 {
 }
 
 .image {
-    height: 400px;
-    width: 500px;
+    height: 500px;
+    width: 600px;
 }
 
 .usageParagraph {
     margin: 0px 200px 0px 200px;
+}
+
+.columns-features {
+    width: 600px;
+}
+
+.column.is-4, .column.is-4-tablet {
+    width: 600px;
+}
+
+#moviePoster {
+    height: 700px;
 }
 
 }
@@ -327,13 +345,25 @@ h1 {
 }
 
 .image {
-    height: 400px;
-    width: 500px;
+    height: 500px;
+    width: 600px;
+}
+
+.columns-features {
+    width: 600px;
+}
+
+.column.is-4, .column.is-4-tablet {
+    width: 600px;
+}
+
+#moviePoster {
+    height: 600px;
 }
 
 }
 
-@media  screen and (max-width: 900px) {
+@media  screen and (max-width: 900px), print {
     h1 {
         margin: 10px 100px 10px 100px;
         font-size: 30px;
@@ -347,20 +377,94 @@ h1 {
         height: 400px;
         width: 500px;
     }
+
+    .columns-features {
+        width: 600px;
+    }
+
+    .column.is-4, .column.is-4-tablet {
+        width: 600px;
+    }
+
+    .column {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #moviePoster {
+        height: 500px;
+        width: 400px;
+    }
+
+    .title {
+        font-size: 50px;
+    }
     
     }
 
-@media screen and (max-width: 775px) {
+
+@media screen and (max-width: 750px) {
     .usageArea {
         font-size: 40px;
+        margin: 0px;
     }
 
-.devTitle {
+.usageParagraph {
+    margin: 20px;
+}
+
+.input {
+    width: 300px;
+}
+
+.title {
+    margin: 40px;
     font-size: 40px;
 }
 
-.column.is-4, .column.is-4-tablet {
-    width: 500px;
+.columns-features {
+    width: 300px;
+}
+
+.image {
+    height: 300px;
+    width: 400px;
+}
+
+.column.is-4 {
+    width: 325px;
+}
+
+.devTitle {
+    font-size: 30px;
+}
+
+.usageArea {
+    font-size: 30px;
+}
+
+.input {
+    width: 200px;
+    font-size: 16px;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+}
+
+@media screen and (max-width: 300px) {
+    .image {
+        height: 300px;
+        width: 325px;
+    }
+
+.column.is-4 {
+    width: 325px;
 }
 
 }
