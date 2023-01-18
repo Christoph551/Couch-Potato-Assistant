@@ -1,3 +1,8 @@
+html {
+    background-color: black;
+    padding-left: 10px;
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -418,9 +423,14 @@ h1 {
     width: 300px;
 }
 
+h1 {
+    font-size: 28px;
+}
+
 .title {
-    margin: 40px;
-    font-size: 40px;
+    font-size: 28px;
+    margin: 20px;
+    padding: 20px 0px 20px 0px;
 }
 
 .columns-features {
@@ -469,12 +479,12 @@ h1 {
 
 .title {
     margin: 20px;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 h1 {
     margin: 20px;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 }
