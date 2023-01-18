@@ -23,8 +23,9 @@ From there, if you were to click on the Home button, then you will be redirected
 
 ## Screenshots for Mobile View
 
-![Home Page Mobile]()
-![Movie Info Mobile]()
+![Home Page Mobile](./Assets/Homepage-Mobile.jpg)
+![Home Page Mobile2](./Assets/Homepage-Mobile2.jpg)
+
 
 ## Credits
 
